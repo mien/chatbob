@@ -1,0 +1,16 @@
+{
+  "name": "chatty",
+  "version": "1.0.0",
+  "description": "chatbot dialog engine",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Munawwar Hussain",
+  "license": "ISC",
+  "dependencies": {
+    "linebyline": "^1.3.0",
+    "micromatch": "^3.0.3",
+    "node-telegram-bot-api": "^0.27.1"
+  }
+}
