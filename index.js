@@ -1,7 +1,7 @@
 'use strict';
 const BotBuilder = require('./lib').BotBuilder;
 const Dialog = require('./lib').Dialog;
-// const TelegramConnector = require('./lib/connector/telegram-connector');
+const TelegramConnector = require('./lib/connector/telegram-connector');
 const ConsoleConnector = require('./lib/connector/console-connector');
 
 const greetingDialog = new Dialog({
@@ -29,7 +29,7 @@ const pizzaDialog = new Dialog({
 })
 
 pizzaDialog.addQuestion('What size pizza do you want ?', (ctx, response, next) => {
-  ctx.endDialog()
+  // ctx.endDialog()
   next();
 })
 
@@ -44,9 +44,10 @@ byeDialog.addQuestion('have a good day ?', (ctx, response, next) => {
   next();
 })
 
-
+// const cs_connector = new ConsoleConnector();
+const tl_connector = new TelegramConnector('47947300:AAH4Ab7KZy7-gq2E2R16Ks7oDiPu476Islw');
 const params = {
-  'connector': new ConsoleConnector(),
+  'connector': tl_connector,
   'defaultDialog': greetingDialog
 }
 const bot = new BotBuilder(params)
