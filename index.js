@@ -9,6 +9,7 @@ const greetingDialog = new Dialog({
 });
 
 greetingDialog.setTrigger('hello')
+
 greetingDialog.addQuestion('what is your name?', (ctx, response, next) => {
   ctx.name = response.text;
   next();
@@ -37,6 +38,7 @@ pizzaDialog.addQuestion('do you want cheez bust ?', (ctx, response, next) => {
   ctx.beginDialog('bye')
   next();
 })
+
 const byeDialog = new Dialog({
   'name': 'bye'
 })
