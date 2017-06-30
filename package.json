@@ -9,6 +9,7 @@
   "author": "Munawwar Hussain",
   "license": "ISC",
   "dependencies": {
+    "@slack/client": "^3.10.0",
     "linebyline": "^1.3.0",
     "micromatch": "^3.0.3",
     "node-telegram-bot-api": "^0.27.1"
