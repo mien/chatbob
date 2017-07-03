@@ -48,10 +48,10 @@ byeDialog.addQuestion('have a good day ?', (ctx, response, next) => {
 })
 
 // const cs_connector = new ConsoleConnector();
-// const tl_connector = new TelegramConnector('47947300:AAH4Ab7KZy7-gq2E2R16Ks7oDiPu476Islw');
+const tl_connector = new TelegramConnector('47947300:AAH4Ab7KZy7-gq2E2R16Ks7oDiPu476Islw');
 const sl_connector = new SlackConnector('xoxb-186332155015-AiCG7pcF7z9Z1enHokxfCtpq');
 const params = {
-  'connector': sl_connector,
+  'connector': [tl_connector, sl_connector],
   'defaultDialog': greetingDialog
 }
 const bot = new BotBuilder(params)
