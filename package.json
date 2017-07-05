@@ -13,6 +13,7 @@
     "linebyline": "^1.3.0",
     "lodash": "^4.17.4",
     "micromatch": "^3.0.3",
-    "node-telegram-bot-api": "^0.27.1"
+    "node-telegram-bot-api": "^0.27.1",
+    "node-uuid": "^1.4.8"
   }
 }

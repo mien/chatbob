@@ -12,7 +12,12 @@ const greetingDialog = new Dialog({
 greetingDialog.setTrigger('hello')
 
 greetingDialog.addQuestion('what is your name?', (ctx, response, next) => {
-  ctx.name = response.text;
+  ctx.userObj.name = response.text;
+  next();
+});
+
+greetingDialog.addQuestion('what is your email?', (ctx, response, next) => {
+  // ctx.userObj.id = response.text;
   next();
 });
 
@@ -21,6 +26,7 @@ greetingDialog.addQuestion('what is your age?', (ctx, response, next) => {
   ctx.beginDialog('pizza')
   next();
 });
+
 greetingDialog.addQuestion('where do you stay?', (ctx, response, next) => {
   ctx.age = response.text;
   next();
@@ -55,6 +61,9 @@ const params = {
   'defaultDialog': greetingDialog
 }
 const bot = new BotBuilder(params)
+
 bot.addDialog(greetingDialog)
 bot.addDialog(pizzaDialog)
 bot.addDialog(byeDialog)
+
+bot.listen();
