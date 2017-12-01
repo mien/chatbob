@@ -52,9 +52,11 @@ const byeDialog = new Dialog({
 byeDialog.addQuestion('have a good day ?', (ctx, response, next) => {
   next();
 })
+const TELEGRAM_TOKEN = ''
+const SLACK_TOKEN = ''
 
-const tl_connector = new TelegramConnector('47947300:AAH4Ab7KZy7-gq2E2R16Ks7oDiPu476Islw');
-const sl_connector = new SlackConnector('xoxb-186332155015-AiCG7pcF7z9Z1enHokxfCtpq');
+const tl_connector = new TelegramConnector(TELEGRAM_TOKEN);
+const sl_connector = new SlackConnector(SLACK_TOKEN);
 
 const params = {
   'connector': [tl_connector, sl_connector],
